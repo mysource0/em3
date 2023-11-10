@@ -1,0 +1,85 @@
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, rgb(221, 221, 219), rgb(249, 255, 230)); /* Light gray gradient */
+    color: #333; /* Dark gray text */
+}
+
+header {
+    background: linear-gradient(to right, rgb(74, 183, 255), rgb(0, 162, 255)); /* Dark gray gradient header */
+    color: #fff; /* White text on dark background */
+    text-align: center;
+    padding: 8px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.product-card-1 {
+    background: linear-gradient(to bottom, rgb(218, 252, 253), rgb(215, 215, 246)); /* Light gray gradient */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+}
+
+.product-card-2 {
+    background: linear-gradient(to bottom, rgb(204, 250, 252), rgb(202, 202, 249)); /* Light gray gradient */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+}
+
+.product-card-3 {
+    background: linear-gradient(to bottom, rgb(168, 251, 254), rgb(169, 169, 254)); /* Light gray gradient */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+}
+
+.product-card-1 img,
+.product-card-2 img,
+.product-card-3 img {
+    max-width: 40%;
+    border-radius: 12px 15px 0 0;
+}
+
+.buy-now-link {
+    display: inline-block;
+    background: linear-gradient(to right, #ff8000, #ff6600); /* Orange gradient button for contrast */
+    color: #fff; /* White text on orange background */
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+.buy-now-link:hover {
+    background: linear-gradient(to right, #e64d00, #cc4400); /* Slightly darker orange gradient on hover */
+}
+
+
+footer {
+    background: linear-gradient(to right, #4e4e4e, #242424); /* Dark gray gradient footer */
+    color: #fff; /* White text on dark background */
+    text-align: center;
+    padding: 6px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Your Online Store</title>
+
+    <style>
+
+        #countdown {
+            font-size: 24px;
+            margin: 50px;
+            padding: 20px;
+            background-color: rgb(232, 105, 1);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Online Store</h1>
+    </header><br>
+    <div id="countdown"></div><br>
+    <main id="products">
+        <!-- Product cards go here -->
+        <div class="product-card-1">
+            <img src="em3.jpg" alt="Product 1">
+            <h3>Engineering mathemetics-3 (unit 1 2 3), e-book</h3>
+            <p>Description for Product 1.</p>
+            <p>Price: <del>₹159.00</del></p>
+            Now only just at 
+            <b><p>Price: ₹59.00</p></b>
+            <a href="buy-now.html" class="buy-now-link">Get-copy</a>
+        </div>
+        <div class="product-card-2">
+            <img src="em3.jpg" alt="Product 1">
+            <h3>Engineering mathemetics-3 (unit 4 5), e-book</h3>
+            <p>Price: <del>₹159.00</del></p>
+            Now only just at 
+            <b><p>Price: ₹59.00</p></b>
+            <a href="buy-now.html" class="buy-now-link">Get-copy</a>
+        </div>
+        <div class="product-card-3">
+            <img src="em3.jpg" alt="Product 1">
+            <h3>Engineering mathemetics-3 (complete e-book) </h3>
+            <p>Price: <del>₹299.00</del></p>
+            Now only just at 
+            <b><p>Price: ₹79.00</p></b>
+            <a href="buy-now.html" class="buy-now-link">Get-copy</a>
+        </div>
+        <!-- Repeat the above block for other products -->
+    </main>
+    <br><br><br>
+    <footer>
+        <p>&copy; contact :<br>
+        mail : helloworld034034@gmail.com</p>
+    </footer>
+    <br>
+    <script>
+        // Set the date to count down to
+      const countDownDate = new Date("Nov 15, 2023 23:59:59").getTime();
+      // const countDownDate = new Date("Nov 10, 2023 22:29:05").getTime();  // to check the working of countdown block
+      const countdownElement = document.getElementById("products");
+
+        // Update the countdown every 1 second
+        const x = setInterval(function() {
+            // Get the current date and time
+            const now = new Date().getTime();
+
+            // Calculate the time difference
+            const distance = countDownDate - now;
+
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the countdown
+            document.getElementById("countdown").innerHTML = ` <b>sale going to end in :</b>
+            <br>
+                ${days}d ${hours}h ${minutes}m ${seconds}s
+            `;
+
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "Sale ended";
+                countdownElement.style.display = "none";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
